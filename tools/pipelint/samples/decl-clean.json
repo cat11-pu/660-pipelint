@@ -1,0 +1,23 @@
+{
+  "nodes": [
+    {"name": "split", "type": "divider"},
+    {"name": "a1", "type": "worker"},
+    {"name": "a2", "type": "worker"},
+    {"name": "merge", "type": "merger"},
+    {"name": "judge", "type": "judger"},
+    {"name": "c1", "type": "worker"},
+    {"name": "c2", "type": "worker"}
+  ],
+  "edges": [
+    ["head000", "split"],
+    ["split", "a1"],
+    ["split", "a2"],
+    ["a1", "merge"],
+    ["a2", "merge"],
+    ["merge", "judge"],
+    ["judge", "c1"],
+    ["judge", "c2"],
+    ["c1", "tail111"],
+    ["c2", "tail111"]
+  ]
+}

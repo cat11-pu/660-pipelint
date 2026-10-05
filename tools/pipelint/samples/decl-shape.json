@@ -1,0 +1,12 @@
+{
+  "nodes": [
+    {"name": "a", "type": "worker"},
+    {"name": "b", "type": "worker"},
+    {"name": "c", "type": "worker"}
+  ],
+  "edges": [
+    ["head000", "a"],
+    ["a", "b"],
+    ["b"]
+  ]
+}

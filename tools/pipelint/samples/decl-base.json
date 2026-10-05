@@ -1,0 +1,38 @@
+{
+  "nodes": [
+    {"name": "split", "type": "divider"},
+    {"name": "left", "type": "worker"},
+    {"name": "right", "type": "worker"},
+    {"name": "join", "type": "merger"},
+    {"name": "gate", "type": "judger"},
+    {"name": "pa", "type": "worker"},
+    {"name": "pb", "type": "worker"},
+    {"name": "bad", "type": "merger"},
+    {"name": "stub", "type": "worker"},
+    {"name": "island", "type": "worker"},
+    {"name": "selfie", "type": "worker"},
+    {"name": "loop1", "type": "worker"},
+    {"name": "loop2", "type": "worker"}
+  ],
+  "edges": [
+    ["head000", "split"],
+    ["head000", "loop1"],
+    ["split", "left"],
+    ["split", "right"],
+    ["split", "left"],
+    ["left", "join"],
+    ["right", "join"],
+    ["join", "gate"],
+    ["gate", "pa"],
+    ["gate", "pb"],
+    ["gate", "bad"],
+    ["bad", "tail111"],
+    ["pa", "tail111"],
+    ["pb", "tail111"],
+    ["tail111", "stub"],
+    ["ghost", "join"],
+    ["selfie", "selfie"],
+    ["loop1", "loop2"],
+    ["loop2", "loop1"]
+  ]
+}
